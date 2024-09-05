@@ -29,7 +29,7 @@ function App() {
   }, [token]);
 
   return (
-    <Router>
+    <Router basename="/JobApp">
       <Routes>
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
