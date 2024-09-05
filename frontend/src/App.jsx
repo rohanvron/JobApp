@@ -29,13 +29,11 @@ function App() {
   }, [token]);
 
   return (
-    <Router basename="/JobApp">
+    <Router>
       <Routes>
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/*"
-          element={user ? <AppContent /> : <Navigate to="/login" />}
+        <Route path='/'element={user ? <AppContent /> : <Navigate to="/login" />}
         />
       </Routes>
     </Router>
