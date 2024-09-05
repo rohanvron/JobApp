@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/auth/authActions";
 import { useNavigate, Link } from "react-router-dom";
 import logo from "../assets/logo1.png";
+import { toast } from "react-hot-toast";
+
 
 // Login page component for user and admin
 const LoginPage = () => {
@@ -88,7 +90,6 @@ const LoginPage = () => {
               />
             </div>
           </div>
-
           <div>
             <button
               type="submit"

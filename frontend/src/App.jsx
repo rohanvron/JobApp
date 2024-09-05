@@ -6,8 +6,8 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import AppContent from './components/AppContent';
 import axios from 'axios';
-import AdminPage from './pages/AdminPage';
-import UserPage from './pages/UserPage';
+import { Toaster } from 'react-hot-toast';
+
 
 // app component
 function App() {
@@ -40,6 +40,7 @@ function App() {
     <Route path="/admin" element={<Navigate to="/" replace />} />
     <Route path="*" element={<Navigate to="/" />} />
   </Routes>
+  <Toaster/>
 </Router>
 
   );
