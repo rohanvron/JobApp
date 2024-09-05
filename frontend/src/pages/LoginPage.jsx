@@ -19,7 +19,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await dispatch(login(formData));
+      await dispatch(login(formData));
       const updatedUser = JSON.parse(localStorage.getItem('user'));
       if (updatedUser && updatedUser.role === "admin") {
         navigate("/admin");
@@ -28,17 +28,6 @@ const LoginPage = () => {
       }
     } catch (error) {
       console.error("Login error:", error);
-      if (error.response && error.response.data) {
-        if (error.response.data.error === 'Invalid credentials') {
-          toast.error('Invalid email or password');
-        } else if (error.response.data.error === 'User not found') {
-          toast.error('User does not exist');
-        } else {
-          toast.error('An error occurred. Please try again.');
-        }
-      } else {
-        toast.error('An error occurred. Please try again.');
-      }
     }
   };
 
