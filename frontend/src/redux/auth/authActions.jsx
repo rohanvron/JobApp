@@ -56,6 +56,6 @@ export const checkAuthState = () => (dispatch) => {
 //token in axios defaults
 const token = localStorage.getItem('token');
 
-axios.defaults.baseURL = 'https://job-app-orpin.vercel.app';
+axios.defaults.baseURL = 'https://jobapp.adaptable.app';
 
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;

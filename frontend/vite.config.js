@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://job-app-orpin.vercel.app'
+      '/api': 'https://jobapp.adaptable.app'
     }
   }
 })

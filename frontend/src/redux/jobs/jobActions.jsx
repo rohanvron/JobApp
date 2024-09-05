@@ -101,6 +101,6 @@ export const applyForJob = (jobId) => async (dispatch, getState) => {
 // setting up axios defaults with token
 const token = localStorage.getItem('token');
 
-axios.defaults.baseURL = 'https://job-app-orpin.vercel.app';
+axios.defaults.baseURL = 'https://jobapp.adaptable.app';
 
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
