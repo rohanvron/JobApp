@@ -101,7 +101,6 @@ export const applyForJob = (jobId) => async (dispatch, getState) => {
 // setting up axios defaults with token
 const token = localStorage.getItem('token');
 
-axios.defaults.baseURL = '';
+axios.defaults.baseURL = 'https://job-app-snowy.vercel.app';
 
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
