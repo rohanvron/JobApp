@@ -22,7 +22,7 @@ const MobileHeader = ({ selectedTab, setSelectedTab, user, onLogout }) => {
 
   return (
     <>
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md pt-6">
       <div className="flex justify-between items-center p-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-8 h-8 mr-2" />
