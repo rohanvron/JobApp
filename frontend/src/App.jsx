@@ -6,6 +6,8 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import AppContent from './components/AppContent';
 import axios from 'axios';
+import AdminPage from './pages/AdminPage';
+import UserPage from './pages/UserPage';
 
 // app component
 function App() {
@@ -31,11 +33,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/user" element={<UserPage />} />
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path='/'element={user ? <AppContent /> : <Navigate to="/login" />} /> 
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
