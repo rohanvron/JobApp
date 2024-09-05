@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* background image settings */
+body {
+    background: url("/bg.png");
+    background-color: #d6d6d6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Mobile styles for login and signup components only */
+@media (max-width: 388px) {
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;  
+    }
+
+    body {
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-container {
+        width: 100%;
+        max-width: 388px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-form {
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        box-sizing: border-box;
+    }
+}
