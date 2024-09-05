@@ -32,15 +32,16 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/user" element={<UserPage />} />
-        <Route path='/'element={user ? <AppContent /> : <Navigate to="/login" />} /> 
-        <Route path="*" element={<Navigate to="/login" />} />
-      </Routes>
-    </Router>
+  <Routes>
+    <Route path="/signup" element={<SignupPage />} />
+    <Route path="/login" element={<LoginPage />} />
+    <Route path="/" element={user ? <AppContent /> : <Navigate to="/login" />} />
+    <Route path="/user" element={<Navigate to="/" replace />} />
+    <Route path="/admin" element={<Navigate to="/" replace />} />
+    <Route path="*" element={<Navigate to="/" />} />
+  </Routes>
+</Router>
+
   );
 }
 
